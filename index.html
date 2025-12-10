@@ -1078,12 +1078,11 @@ object-fit: cover;     /* витринный вариант: заполняет 
             </div>
 
    <form
-  name="order"               
-  method="POST"
-  data-netlify="true"        
   class="contact-form"
+	   action="https://formsubmit.co/ewgen070@gmail.com"
+	   method="POST"
 >
-<input type="hidden" name="form-name" value="order" />
+
               <div class="form-row">
                 <label for="name">Имя</label>
                 <input class="form-input" type="text" id="name" name="name" required placeholder="Как к вам обращаться" />
@@ -1100,7 +1099,7 @@ object-fit: cover;     /* витринный вариант: заполняет 
               </div>
 
 <input type="hidden" name="_subject" value="Новый заказ с сайта gek23">
-<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_captcha" value="true">
 <input type="hidden" name="_template" value="table">
               <button type="submit" class="btn btn-primary">Отправить</button>
               <div id="form-message" class="form-message"></div>
@@ -1186,4 +1185,5 @@ object-fit: cover;     /* витринный вариант: заполняет 
     });
   </script>
 </body>
+
 </html>
