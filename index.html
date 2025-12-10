@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>gek23 — кожаные изделия ручной работы</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="gek23 — кожаные ремни, кошельки, обложки и аксессуары ручной работы из натуральной кожи." />
+
+  <!-- Шрифт B612 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Valera:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-body: #050309;
+
+      --bg-hero: radial-gradient(circle at top, #3c2718 0, #0b0604 55%, #050309 100%);
+
+      --gold-soft: #f3cf8f;
+      --gold-strong: #ffd87e;
+      --text-main: #f9f5ee;
+      --text-muted: #c8b49b;
+
+      --radius-xl: 32px;
+      --radius-l: 24px;
+      --radius-m: 14px;
+
+      --shadow-strong: 0 24px 60px rgba(0, 0, 0, 0.95);
+      --shadow-card: 0 24px 56px rgba(0, 0, 0, 0.95);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: "B612", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      background: 
+radial-gradient(circle at 50% -120px,
+      #3a3029 0%,
+      #120c12 35%,
+      #050309 65%,
+      #020005 100%);
+      color: var(--text-main);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: transparent;
+      box-shadow: var(--shadow-strong);
+      border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+      
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    /* HEADER & NAV */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: linear-gradient(to bottom, rgba(5,3,9,0.98), rgba(5,3,9,0.9), transparent);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px 10px;
+      gap: 16px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    .logo-text-main {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+    }
+
+    nav.main-nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 15px;
+    }
+
+    nav.main-nav a {
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    nav.main-nav a:hover {
+      color: var(--gold-soft);
+      border-color: rgba(255, 207, 115, 0.35);
+      background: rgba(15, 9, 6, 0.9);
+    }
+
+    .btn-nav {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 13px;
+      border-radius: 999px;
+      padding: 8px 16px;
+      border: 1px solid rgba(255, 231, 186, 0.9);
+        background:
+    linear-gradient(145deg,
+      rgba(252, 231, 202, 0.80),
+      rgba(228, 186, 137, 0.65),
+      rgba(178, 122, 70, 0.55));
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  backdrop-filter: blur(26px) saturate(1.15);
+  -webkit-backdrop-filter: blur(26px) saturate(1.15);
+
+  box-shadow: 0 28px 60px rgba(0,0,0,0.9);	
+      color: #f2f2f2 !important;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.9);
+
+    }
+
+    .btn-nav:hover {
+      filter: brightness(1.05);
+      transform: translateY(-2px);
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      transition: 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+        background:
+    linear-gradient(145deg,
+      rgba(252, 231, 202, 0.80),
+      rgba(228, 186, 137, 0.65),
+      rgba(178, 122, 70, 0.55));
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  backdrop-filter: blur(26px) saturate(1.15);
+  -webkit-backdrop-filter: blur(26px) saturate(1.15);
+
+  box-shadow: 0 28px 60px rgba(0,0,0,0.9);
+      color: #261307;
+      border: 1px solid rgba(255, 231, 186, 0.9);
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.95);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.06);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background:
+    linear-gradient(135deg,
+      rgba(40, 29, 35, 0.80),
+      rgba(18, 12, 20, 0.88),
+      rgba(5, 3, 9, 0.96));
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  /* сильный матовый эффект */
+  backdrop-filter: blur(26px) saturate(1.2);
+  -webkit-backdrop-filter: blur(26px) saturate(1.2);
+
+  box-shadow: 0 28px 60px rgba(0,0,0,0.95);
+  color: var(--text-main);
+      border: 1px solid rgba(255, 207, 115, 0.6);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.9);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 207, 115, 0.08);
+      transform: translateY(-2px);
+    }
+
+    /* GLASS PANELS — эффект стекла НА ВСЕМ БЛОКЕ */
+
+    .section-panel {
+      border-radius: var(--radius-xl);
+  padding: 32px 30px 34px;
+
+  /* полупрозрачный тёмный градиент */
+  background:
+    linear-gradient(135deg,
+      rgba(40, 29, 35, 0.80),
+      rgba(18, 12, 20, 0.88),
+      rgba(5, 3, 9, 0.96));
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  /* сильный матовый эффект */
+  backdrop-filter: blur(26px) saturate(1.2);
+  -webkit-backdrop-filter: blur(26px) saturate(1.2);
+
+  box-shadow: 0 28px 60px rgba(0,0,0,0.95);
+  color: var(--text-main);
+    }
+
+    .section-panel--light {
+      border-radius: var(--radius-xl);
+  padding: 32px 30px 34px;
+
+  /* полупрозрачный бежевый градиент */
+  background:
+    linear-gradient(145deg,
+      rgba(252, 231, 202, 0.80),
+      rgba(228, 186, 137, 0.65),
+      rgba(178, 122, 70, 0.55));
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  backdrop-filter: blur(26px) saturate(1.15);
+  -webkit-backdrop-filter: blur(26px) saturate(1.15);
+
+  box-shadow: 0 28px 60px rgba(0,0,0,0.9);
+  color: #2b170a;
+
+    }
+
+    .section-panel--light p,
+    .section-panel--light li,
+    .section-panel--light dd {
+      color: #2b170a;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: transparent;
+      padding: 70px 0 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-panel {
+      margin-top: 8px;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: none;
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(55px);
+      opacity: 0.75;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+
+    .hero::before {
+     width: 420px;
+      height: 420px;
+     background: radial-gradient(closest-corner, #3f87a6, #ebf8e1, #f69d3c);
+      
+    }
+
+    .hero::after {
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(closest-corner, #3f87a6, #ebf8e1, #f69d3c);
+      
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 13px;
+      color: var(--gold-soft);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+.hero-eyebrow--light {
+      font-size: 16px;
+      color: #000000;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+
+    .hero-title {
+      font-size: clamp(34px, 5vw, 44px);
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .hero-title span:first-child {
+      display: block;
+      font-weight: 400;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.7em;
+      margin-bottom: 8px;
+    }
+
+    .hero-title span:last-child {
+      display: block;
+      font-weight: 700;
+      color: var(--gold-strong);
+      text-shadow:
+        0 0 30px rgba(0, 0, 0, 0.9),
+        0 22px 52px rgba(0, 0, 0, 0.98);
+    }
+
+    .hero-text {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 22px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .hero-note {
+      font-size: 13px;
+      color: #000000
+
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hero-card {
+      width: 100%;
+      max-width: 370px;
+      border-radius: 28px;
+      padding: 16px 16px 14px;
+      background:
+        radial-gradient(circle at 25% 0,
+          rgba(255, 228, 193, 0.24) 0,
+          rgba(40, 25, 17, 0.96) 45%,
+          rgba(6, 4, 8, 0.98) 100%);
+      border: 1px solid rgba(255, 231, 186, 0.5);
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(20px);
+      position: relative;
+    }
+
+    .hero-image {
+      border-radius: var(--radius-l);
+      overflow: hidden;
+      height: 280px;
+      background:
+        radial-gradient(circle at 30% 0, #ffdd9a 0, #c68c4a 30%, #5a3620 60%, #0b0503 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-image-placeholder {
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius-l);
+      
+      
+object-fit: cover;                  
+  object-position: top; 
+  display: block;
+    }
+
+    .hero-card-caption {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* COMMON SECTION STYLES */
+
+    section {
+      padding: 52px 0;
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .section-title span {
+      color: var(--gold-soft);
+    }
+ .section-title span-light {
+      color: #000000;
+    }
+
+    .section-subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 22px;
+    }
+
+    /* ВАЖНО: секции сами БЕЗ фона, фон только у стеклянных блоков */
+    .section--dark {
+      background: transparent;
+    }
+
+    .section--leather {
+      background: transparent;
+    }
+
+    /* PRODUCTS */
+
+    .products-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 26px;
+      align-items: flex-start;
+    }
+
+    .about-text {
+      font-size: 15px;
+      color: #f9f5ee;
+    }
+
+    .about-text p + p {
+      margin-top: 10px;
+    }
+
+    .about-bullets {
+      list-style: none;
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .about-bullets li + li {
+      margin-top: 4px;
+    }
+
+    .products-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .product-card {
+      border-radius: var(--radius-l);
+      padding: 12px 12px 11px;
+      background:
+        radial-gradient(circle at 20% 0,
+          rgba(255, 224, 186, 0.2) 0,
+          rgba(26, 16, 10, 0.96) 45%,
+          rgba(6, 4, 8, 0.98) 100%);
+      border: 1px solid rgba(255, 231, 186, 0.35);
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(18px);
+      position: relative;
+      font-size: 14px;
+    }
+
+    .product-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-image {
+      border-radius: 16px;
+      overflow: hidden;
+      height: 120px;
+     
+      background:
+        radial-gradient(circle at 15% 0, #ffdca4 0, #c98742 30%, #4d2b1b 70%, #150a06 100%);
+      display: flex;
+      
+    }
+
+    .product-placeholder {
+      width: 100%;
+      height: 100%;
+object-fit: cover;     /* витринный вариант: заполняет рамку, лишнее обрезает */
+  object-position: center;
+  display: block;
+      
+    }
+
+
+    .product-title {
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .product-text {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ABOUT (на коже, светлая стеклянная панель) */
+
+    .about-panel-text {
+      font-size: 15px;
+    }
+
+    .about-panel-text p + p {
+      margin-top: 10px;
+    }
+
+    .about-panel-list {
+      margin-top: 10px;
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .about-panel-list li + li {
+      margin-top: 4px;
+    }
+
+    /* ORDER (форма) */
+
+    .order-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 26px;
+      align-items: flex-start;
+    }
+
+    form.contact-form {
+      border-radius: 28px;
+      padding: 22px 22px 20px;
+      background:
+        radial-gradient(circle at 15% 0,
+          rgba(255, 228, 193, 0.24) 0,
+          rgba(12, 8, 14, 0.95) 45%,
+          rgba(4, 3, 7, 0.98) 100%);
+      border: 1px solid rgba(255, 231, 186, 0.45);
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(22px);
+      font-size: 14px;
+    }
+
+    .form-row {
+      margin-bottom: 14px;
+    }
+
+    .form-row label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: var(--text-muted);
+    }
+
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      padding: 9px 11px;
+      border-radius: var(--radius-m);
+      border: 1px solid rgba(88, 63, 42, 0.9);
+      background: rgba(7, 4, 9, 0.9);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: rgba(255, 207, 115, 0.9);
+      box-shadow: 0 0 0 1px rgba(255, 207, 115, 0.5);
+    }
+
+    .form-textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-input.error,
+    .form-textarea.error {
+      border-color: #ff6b6b;
+    }
+
+    .form-message {
+      margin-top: 8px;
+      font-size: 13px;
+      min-height: 18px;
+    }
+
+    .form-message.error {
+      color: #ff8a8a;
+    }
+
+    .form-message.success {
+      color: #9ae6b4;
+    }
+
+    .order-text {
+      font-size: 15px;
+      color: var(--text-muted);
+    }
+
+    .order-text p + p {
+      margin-top: 10px;
+    }
+
+    /* CONTACTS */
+
+    .contacts-text {
+      font-size: 15px;
+      color: #2b170a;
+    }
+
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 22px;
+      align-items: flex-start;
+    }
+
+    .contacts-list dt {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 6px;
+      color: #2b170a;
+    }
+
+    .contacts-list dd {
+      margin: 0;
+      font-size: 14px;
+      color: #3a2312;
+    }
+
+    .contacts-list dd + dt {
+      margin-top: 10px;
+    }
+
+    .contacts-list a {
+      color: #2b170a;
+    }
+
+    .contacts-list a:hover {
+      color: var(--gold-soft);
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .social-link {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(196, 178, 168, 0.95);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(96, 70, 48, 0.9);
+      transition: 0.2s ease;
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.8);
+    }
+
+    .social-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 207, 115, 0.9);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.9);
+    }
+
+    .social-icon {
+      width: 18px;
+      height: auto;
+      fill: currentColor;
+    }
+
+    .contacts-note {
+      margin-top: 14px;
+      font-size: 12px;
+      color: #3a2312;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #050309;
+      border-top: 1px solid #120a0c;
+      padding: 14px 22px 18px;
+      font-size: 12px;
+      color: #857160;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .header-inner {
+        flex-wrap: wrap;
+        row-gap: 10px;
+      }
+
+      nav.main-nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero-visual {
+        justify-content: flex-start;
+      }
+
+      .products-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .products-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .order-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contacts-grid {
+        grid-template-columns: 1fr;
+      }
+.hero-image,
+      .product-image {
+        height: auto;           
+  }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        padding-inline: 10px;
+
+
+      }
+
+
+      .container {
+        padding-inline: 14px;
+      }
+
+      .hero {
+        padding: 52px 0 54px;
+      }
+
+      .section-panel,
+      .section-panel--light {
+        padding: 22px 18px 24px;
+      }
+
+      .products-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 100%;
+      }
+
+.hero-image,
+      .product-image {
+        height: auto;           
+  }
+  nav.main-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* равномерно по ширине */
+    flex-wrap: nowrap;              /* НЕ переносить на вторую строку */
+    gap: 4px;
+  }
+
+  nav.main-nav a {
+    font-size: 13px;
+    padding: 4px 6px;               /* меньше отступы, чтобы влезло */
+    white-space: nowrap;
+    flex: 1 1 auto;                 /* можно слегка сжиматься */
+    text-align: center;
+  }
+
+  nav.main-nav .btn-nav {
+    font-size: 12px;
+    padding: 5px 10px;
+    letter-spacing: 0.08em;         /* меньше разрядка, короче текст */
+    flex: 0 0 auto;                 /* кнопка не растягивается, но и не ломает ряд */
+    white-space: nowrap;
+  }
+
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#hero" class="logo">
+          <!-- SVG-логотип -->
+          <svg class="logo-icon" viewBox="0 0 40 40" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffd793"/>
+                <stop offset="0.45" stop-color="#c98a48"/>
+                <stop offset="1" stop-color="#5a321c"/>
+              </linearGradient>
+            </defs>
+            <circle cx="20" cy="20" r="18" fill="url(#logoGrad)" />
+            <circle cx="20" cy="20" r="13" fill="none" stroke="#241109" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="2 3"/>
+            <path d="M14 24.5V14.8c0-.7.5-1.2 1.2-1.2h9.6c.7 0 1.2.5 1.2 1.2v2.2c0 1.4-.8 2.2-2.2 2.2h-5.2" fill="none" stroke="#241109" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M18 23.5h5.8c.7 0 1.2.5 1.2 1.2v1.5c0 1.4-1.1 2.5-2.5 2.5H14" fill="none" stroke="#241109" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="logo-text-main">gek23</div>
+            <div class="logo-text-sub">leather craft</div>
+          </div>
+        </a>
+
+        <nav class="main-nav">
+          <a href="#products">Изделия</a>
+          <a href="#about">О бренде</a>
+          <a href="#contacts">Контакты</a>
+          <a href="#order" class="btn-nav">Заказать</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="hero">
+  <div class="container">
+    <div class="section-panel--light">
+      <div class="hero-inner">
+        <div>
+         
+	
+          <h1 class="hero-title">
+          <span>gek23</span>
+          </h1>
+          <p class="hero-text">
+            Ремни, кошельки, обложки и аксессуары из натуральной кожи. 
+            Тёплый цвет, аккуратная прошивка и персональные детали — инициалы, тиснение, формат под вас.
+          </p>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Изделия</a>
+            <a href="#order" class="btn btn-outline">Сделать заказ</a>
+          </div>
+          <div class="hero-note">
+            Изделия делаются по предзаказу · Срок изготовления 3–10 дней.
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-image">
+             
+              <div class="hero-image-placeholder">
+                <img src="images/hero_pic.png" alt="Портмоне">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- ИЗДЕЛИЯ -->
+      <section class="hero" id="products">
+        <div class="container">
+          <div class="section-panel">
+            <h2 class="section-title"><span>Изделия</span> gek23</h2>
+            <p class="section-subtitle">
+              Базовые форматы, которые можно адаптировать под вас: поменять цвет кожи, нитку,
+              добавить инициалы или собрать мини‑набор.
+            </p>
+
+            <div class="products-layout">
+              <div class="about-text">
+                <p>
+                  Все изделия gek23 шьются вручную из натуральной кожи. 
+                  Кромки шлифуются и прокрашиваются, чтобы ремень или кошелёк выглядел аккуратно и служил долго.
+                </p>
+                <p>
+                  Вы выбираете формат, цвет, толщину кожи и дополнительные детали — я аккуратно реализую это в изделии.
+                </p>
+               
+              </div>
+
+              <div class="products-list">
+                <!-- Карточка 1 -->
+                <article class="product-card">
+                  <div class="product-inner">
+                    <div class="product-image">
+                    
+                      <div class="product-placeholder">
+                        <img src="images/bolt.jpg" alt="Классический ремень">
+                      </div>
+                    </div>
+                    <div class="product-title">Ремни</div>
+                    <div class="product-text">
+                      Толстая кожа, надёжная пряжка, ширина 30–40 мм.
+                      Длина подгоняется под ваш размер.
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Карточка 2 -->
+                <article class="product-card">
+                  <div class="product-inner">
+                    <div class="product-image">
+                      <div class="product-placeholder">
+                        <img src="images/holder.jpg" alt="Кошелек">
+                      </div>
+                    </div>
+                    <div class="product-title">Кошельки</div>
+                    <div class="product-text">
+                      Отделения под купюры и 4–8 карт,
+                      возможна контрастная прошивка и инициалы.
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Карточка 3 -->
+                <article class="product-card">
+                  <div class="product-inner">
+                    <div class="product-image">
+                      <div class="product-placeholder">
+                        <img src="images/case.jpg" alt="Косметичка">
+                      </div>
+                    </div>
+                    <div class="product-title">Аксессуары</div>
+                    <div class="product-text">
+                      Обложки, ключницы, ремешки для часов и небольшие подарочные комплекты.
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- О БРЕНДЕ -->
+      <section class="hero" id="about">
+        <div class="container">
+          <div class="section-panel--light">
+            <h2 class="section-title"><span-light>О бренде</span-light> 
+</h2>
+            <p class="section-subtitle">
+              Минимум лишнего декора и максимум внимания к материалу. 
+              Каждое изделие делается по заказу, а не «с полки».
+            </p>
+
+            <div class="about-panel-text">
+              <p>
+                gek23 — это небольшая мастерская, в которой каждое изделие проходит через руки одного мастера:
+                от раскроя кожи до последней капли финиша на кромках.
+              </p>
+              <p>
+                Важны не только красивые фото, но и ощущение в руках: плотная кожа, ровная строчка,
+                удобно лежит в ладони и каждый день напоминает о владельце — по цвету, фактуре и инициалам.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ЗАКАЗАТЬ -->
+      <section class="hero" id="order">
+        <div class="container">
+          <div class="order-layout">
+            <div class="order-text">
+              <h2 class="section-title"><span>Заказать</span> изделие</h2>
+              <p class="section-subtitle">
+                Напишите, что вы хотите сделать, и приложите, если есть, несколько фото‑примеров.
+                Так будет проще подобрать кожу и назвать стоимость.
+              </p>
+              <p>
+                Обычно достаточно описать: какой предмет (ремень, кошелёк, обложка), для кого он
+                (себе / в подарок) и какие пожелания по цвету и формату.
+              </p>
+              <p>
+                После обсуждения я называю точную стоимость и срок, вы вносите предоплату 30–50%,
+                и я приступаю к работе.
+              </p>
+            </div>
+
+   <form
+  name="order"               
+  method="POST"
+  data-netlify="true"        
+  class="contact-form"
+>
+<input type="hidden" name="form-name" value="order" />
+              <div class="form-row">
+                <label for="name">Имя</label>
+                <input class="form-input" type="text" id="name" name="name" required placeholder="Как к вам обращаться" />
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input class="form-input" type="email" id="email" name="email" required placeholder="you@example.com" />
+              </div>
+
+              <div class="form-row">
+                <label for="message">Сообщение</label>
+                <textarea class="form-textarea" id="message" name="message" required placeholder="Опишите, какое изделие вы хотите"></textarea>
+              </div>
+
+<input type="hidden" name="_subject" value="Новый заказ с сайта gek23">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+              <button type="submit" class="btn btn-primary">Отправить</button>
+              <div id="form-message" class="form-message"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- КОНТАКТЫ -->
+      <section class="hero" id="contacts">
+        <div class="container">
+          <div class="section-panel section-panel--light">
+            <h2 class="section-title"><span-light>Контакты</span-light> gek23</h2>
+
+            <div class="contacts-grid">
+              <div class="contacts-text">
+                <dl class="contacts-list">
+                  <dt>Телефон</dt>
+                
+                  <dd><a href="tel:+79668552003">+7 (966) 855‑20‑03</a></dd>
+
+                  <dt>Email</dt>
+                  
+                  <dd><a href="mailto:ewgen070@gmail.com">ewgen070@gmail.com</a></dd>
+
+                  <dt>Соцсети</dt>
+                  <dd>
+                    <div class="socials">
+                      <!-- Instagram -->
+                      <a class="social-link" href="https://instagram.com/g2e3k" target="_blank" rel="noopener noreferrer" aria-label="Instagram gek23">
+                        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                          <rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+                          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+                          <circle cx="17.3" cy="6.7" r="0.9" fill="currentColor"/>
+                        </svg>
+                      </a>
+                      <!-- Telegram -->
+                      <a class="social-link" href="https://t.me/GribanovE" target="_blank" rel="noopener noreferrer" aria-label="Telegram gek23">
+                        <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M20.4 4.3 3.9 10.5c-1 .4-1 1.5-.2 1.8l3.7 1.3 1.4 4.4c.2.6.9.7 1.3.3l2.1-2 3.6 2.7c.7.5 1.7.1 1.9-.8l2.5-12c.2-.9-.6-1.6-1.3-1.2z" fill="currentColor"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </dd>
+
+                  <dt>Доставка</dt>
+                  <dd>
+                    Работаю по России, отправляю СДЭК / Почтой.
+                  </dd>
+                </dl>
+
+                <p class="contacts-note">
+                  В переписке можно обменяться дополнительными фото и уточнить все детали:
+                  цвет кожи, тип фурнитуры, сроки и упаковку.
+                </p>
+              </div>
+
+              <div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> gek23. Все права защищены.</div>
+        <div>Сайт‑визитка бренда кожаных изделий gek23.</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Год в футере
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    
+
+     
+    });
+  </script>
+</body>
+</html>
